@@ -27,7 +27,6 @@ cc.Class({
                 this.speedY = this.speedY * -1;
                 break;
             case 2:
-            case 3:
                 this.speedX = this.speedX * -1;
         }
         console.log(this.speedX,this.speedY);

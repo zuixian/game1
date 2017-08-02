@@ -7,12 +7,10 @@ cc.Class({
 
     onLoad: function () {
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN,this.onKeyDown,this);
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP,this.onKeyUp,this);
     },
 
     onDestroy () {
         cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP,this.onKeyUp,this);
     },
 
     onKeyDown: function (event) {
@@ -26,10 +24,6 @@ cc.Class({
                 this._isMove = true;
         }
     },
-
-    onKeyUp: function (event) {
-       this._isMove = false;
-   },
 
     update : function () {
         if (this._isMove) {
